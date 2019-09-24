@@ -1,0 +1,390 @@
+/* 共通事項を記述するCSS */
+main {
+  margin-bottom: 188px;
+}
+header {
+  position: relative;
+  z-index: 0;
+}
+body {
+  font-family: "ヒラギノ角ゴ ProN", 'Noto Sans JP';
+}
+h1, h2, h3, h4, h5, h6 {
+  color: #fff;
+  font-weight: 400;
+}
+header.uk-section-small {
+  padding: 24px 0;
+}
+.logo {
+  background-image: url("../img/logo.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 136.92px;
+  height: 60px;
+  margin-left: 3em;
+  float: left;
+}
+
+/* profilepic */
+
+.material-icons.md-48 {
+  font-size: 48px;
+  margin-right: 1em;
+  display: inline-block;
+  float: right;
+}
+.pf-pic {
+  width: 92px;
+  height: 92px;
+  position: absolute;
+  top: 120px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.myname {
+  text-align: center;
+  padding-top: 2.5em;
+  font-size: 20px;
+  color: #4A4A4A;
+}
+.material-icons.md-dark { color: #fff; }
+
+/* menu */
+
+.slidemenu {
+  padding:16px;
+  width:220px;
+  height:100vh;
+  position:fixed;
+  background-color:#2D3142;
+  top:0;
+  right:-220px;
+  z-index:4;
+  box-shadow:0 0 10px rgba(0,0,0,0.5);
+  box-sizing:border-box;
+  border-left: 10px #F0815D solid;
+  display:none;
+}
+.slidebar-inner {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.icons {
+  display: inline;
+  width: 15px;
+  height: 15px;
+  margin-left: .6em;
+}
+.menu-back {
+  background-color: #2D3142;
+  transition: .4s;
+}
+.menu-back:hover {
+  background-color: #1A1B27;
+  height: auto;
+  border-radius: 8px;
+  transition: .7s;
+}
+
+.text-group {
+  margin: 8em 0 0 0;
+}
+.sl-txt {
+  font-size:16px;
+  margin-top:16px;
+  margin-left:8px;
+  font-family: "ヒラギノ角ゴ ProN";
+  font-weight: 600;
+  color: #fff;
+  display: inline-block;
+  margin-left: .6em;
+}
+.txt-2 {
+  opacity: .5;
+  margin-top: 5em;
+}
+
+.tw-icon {
+  display: block;
+  margin-left: .6em;
+  margin-bottom: 7em;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+}
+
+/* twitter画像をホバーした */
+img.tw-icon:hover {
+    /* 透明度を上げることで、画像の色を薄く見せる。*/
+    opacity: 0.5;
+    /* リンクをホバーしたときのカーソルにする。*/
+    cursor: pointer;
+}
+
+/* twitter画像をクリックした瞬間 */
+img.tw-icon:active {
+    /* 要素を若干下に下げることで、押した感じを出す。*/
+    /* 今いる位置から相対的に3px下に配置する。*/
+    position: relative;
+    top: 3px;
+}
+
+.slide-back {
+  background-color:#2D3142;
+  width:100vw;
+  height:100vh;
+  opacity:0;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:3;
+  display:none;
+}
+
+#h-menu {
+  cursor: pointer;
+}
+
+#close-btn {
+  cursor: pointer;
+}
+
+
+/* contents */
+
+.uk-section-small {
+  background-color: #2D3142;
+  height: 106px;
+}
+
+.uk-container-xsmall {
+  text-align: center;
+  margin: 5% auto;
+}
+.uk-card.uk-card-default.uk-card-hover.uk-card-body {
+  padding: 0;
+  border-radius: 20px;
+  position: relative;
+  background-size: cover;
+  background-repeat:no-repeat;
+}
+
+.forblank {
+  height: 170px !important;
+
+}
+
+/*
+
+以下URLが変わるので
+バック処理
+
+ */
+#image-1 {
+  background-image: url("../img/contentsimg.jpg");/*ここに投稿した画像が載る*/
+}
+#image-2 {
+  background-image: url("../img/ricky-kharawala-Yka2yhGJwjc-unsplash.jpg");/*ここに投稿した画像が載る*/
+}
+#image-3 {
+  background-image: url();/*ここに投稿した画像が載る*/
+}
+#image-4 {
+  background-image: url();/*ここに投稿した画像が載る*/
+}
+#image-5 {
+  background-image: url();/*ここに投稿した画像が載る*/
+}
+#image-6 {
+  background-image: url();/*ここに投稿した画像が載る*/
+}
+#image-7 {
+  background-image: url();/*ここに投稿した画像が載る*/
+}
+.uk-card.uk-card-default.uk-card-hover.uk-card-body.last-child {
+  background-image: url("../img/ic_add_circle_outline_24px.svg");/*ここは変えない!!*/
+  background-size: 50%;
+  background-position: center;
+}
+
+
+.last-child {
+  opacity: 1;
+  transition: .4s;
+}
+.last-child:hover {
+  opacity: .5;
+  transition: .4s;
+}
+.ct-img {
+  border-radius: 20px;
+}
+
+.plus {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  opacity: .5;
+}
+
+
+/*
+
+modal
+プラスボタンもしくは、「アイテムを追加」を押した場合に
+出現するモーダル
+
+*/
+.uk-modal-dialog.uk-modal-body {
+  padding: 0;
+}
+.modal-container {
+  margin: 8% 8% 4% 8%;
+}
+.close-modal {
+  margin-right: 4%;
+  margin-top: 3%;
+  float: right;
+}
+
+.uk-modal-body {
+  /* height: auto; */
+  border-radius: 25px;
+}
+
+.uk-modal-dialog.uk-modal-body {
+  margin: 10% auto;
+}
+
+.back-btn {
+  display: none;
+}
+
+.add-box {
+  float: left;
+}
+.uk-button.uk-button-default {
+  width: 170px;
+  height: 170px;
+  background-color: #F0F0F0;
+  border-radius: 18px;
+  display: inline-block;
+  margin-top: 20px;
+  position: relative;
+  border-style: none;
+}
+.uk-modal-title {
+  font-weight: bolder;
+  color: #2D3142;
+}
+.inner-txt {
+  position: absolute;
+  left: 25%;
+  right: 0;
+  top: 50%;
+  bottom: 0;
+  margin: auto;
+  color: #B5B5B5;
+}
+.uk-inline {
+  float: right;
+  display: inline-block;
+  margin-top: 1.2em;
+}
+
+.input-title input.uk-input { /* タイトル入力 */
+  width: 18em;
+  border-bottom: 5px #F2F2F2 solid;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  transition: .4s
+}
+.input-title input.uk-input:focus {
+  border-bottom: 5px #F0815D solid;
+  transition: .4s;
+  transition-duration: 800ms;
+}
+.uk-input.inputurl { /* URL入力 */
+  width: 18em;
+  background-color: #F2F2F2;
+  border-style: none;
+  border: 5px #F2F2F2 solid;
+  transition: .4s;
+  border-radius: 8px;
+}
+.uk-input.inputurl:focus {
+  border: 4px #F0815D solid;
+  transition: .2s;
+  transition-duration: 400ms;
+  transition-timing-function: ease;
+}
+.uk-input.inputcm { /* コメント入力 */
+  width: 18em;
+  height: 7em;
+  background-color: #F2F2F2;
+  border-style: none;
+  margin-bottom: 8%;
+  border-radius: 8px;
+  line-height: 1.8em;
+  resize: none;
+  transition: .4s;
+}
+.uk-input.inputcm:focus {
+  border: 4px #F0815D solid;
+  transition: .2s;
+  transition-duration: 400ms;
+  transition-timing-function: ease;
+}
+button.uk-button.uk-button-primary {
+  width: 100%;
+  height: 4.5em;
+  /* margin-top: .1em; */
+  background-color: #F0815D;
+  border-radius: 0 0 25px 25px;
+}
+button.uk-button.uk-button-primary p {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 7px;
+  padding: 10px;
+}
+.tw-2 {
+  margin-top: 50%;
+  width: 45px;
+  height: 45px;
+  display: block;
+}
+
+/* footer */
+
+.logo-footer {
+  background-image: url("../img/logo.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 68px;
+  height: 30px;
+  margin-left: 3em;
+  float: left;
+}
+.uk-section-xsmall {
+  background-color: #2D3142;
+  height: 80px;
+}
+
+.list li {
+  float: right;
+  margin-right: 3em;
+  list-style: none;
+}
+.list li a {
+  text-decoration: none;
+  color: #fff;
+}

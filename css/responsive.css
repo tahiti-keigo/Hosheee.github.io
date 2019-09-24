@@ -1,0 +1,186 @@
+/* 600px〜959px：タブレット iPad: 768px
+------------------------------ */
+@media screen and (min-width:640px) and (max-width:959px) {
+  main {
+    padding: 0 10%;
+  }
+
+  .forblank {
+    height: 18vh !important;
+  }
+
+}
+
+/* 〜640px：スマートフォン縦 iPhone X: 375px
+------------------------------ */
+@media screen and (min-width:331px) and (max-width:640px) {
+  main {
+    padding: 0 10%;
+  }
+
+  header.uk-section-small {
+    padding: 0;
+  }
+
+  .logo {
+    width: math((136.92px/3)*2);
+    height: 40px;
+    margin-left: 3em;
+    margin-top: 1.5em;
+    float: left;
+  }
+
+  #h-menu {
+    margin-top: .35em;
+    margin-right: .5em;
+  }
+
+  .pf-pic {
+    top: 80px;
+  }
+
+  .myname {
+    padding-top: 3.5em;
+    padding-bottom: 1em;
+  }
+
+  .forblank {
+    height: 9em !important;
+  }
+
+  /* modal */
+
+  .uk-modal-dialog.uk-modal-body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-radius: 0px;
+  }
+
+  .uk-modal-title {
+    font-weight: bolder;
+    color: #2D3142;
+    margin-top: .5em;
+  }
+
+  .back-btn {
+    display: block;
+    width: 80px;
+    height: 40px;
+    background-image: url("../img/back-btn.svg");
+    background-repeat: no-repeat;
+  }
+
+  .add-box {
+    float: none;
+    margin-left: 2vh;
+  }
+
+  .inner-txt {
+    left: 4.3em;
+    /* right: 0; */
+    top: 50%;
+    margin: auto;
+    color: #76A9EA;
+  }
+
+  .uk-inline {
+    float: none;
+  }
+
+  .uk-button.uk-button-default {
+    width: 24vh;
+    height: 24vh;
+    display: block;
+
+  }
+  .input-title.inputs {
+    width: 100%;
+  }
+  input {
+    padding-left: 10px;
+  }
+  .uk-modal-title {
+    font-weight: bolder;
+    color: #2D3142;
+  }
+
+  .input-title input.uk-input { /* タイトル入力 */
+    width: 1000px;
+    display: block;
+  }
+  .uk-input.inputurl { /* URL入力 */
+    width: 1000px;
+    display: block;
+  }
+  .uk-input.inputcm { /* コメント入力 */
+    width: 1000px;
+    display: block;
+  }
+  .uk-modal.uk-open {
+    padding: 0;
+  }
+
+  .tw-2 {
+    margin-top: 0;
+  }
+
+  button.uk-button.uk-button-primary {
+    width: 100%;
+    height: 4.5em;
+    /* margin-top: .1em; */
+    background-color: #F0815D;
+    border-radius: 0;
+  }
+}
+
+/* 〜330px：スマートフォン縦 iPhone SE: 320px
+------------------------------ */
+@media screen and (max-width:330px) {
+  main {
+    padding: 0 3vh;
+  }
+
+  header.uk-section-small {
+    padding: 0;
+  }
+
+  .logo {
+    width: math((136.92px/3)*2);
+    height: 40px;
+    margin-left: 2em;
+    margin-top: 1.5em;
+    float: left;
+  }
+
+  #h-menu {
+    margin-top: .35em;
+    margin-right: .5em;
+  }
+
+  .pf-pic {
+    top: 80px;
+  }
+
+  .myname {
+    padding-top: 3.5em;
+    padding-bottom: 1em;
+  }
+
+  .text-group {
+    margin: 4em 0 0 0;
+  }
+
+  .sl-txt {
+    margin-top: .5em;
+  }
+
+  .txt-2 {
+    margin-top: 3em;
+  }
+
+  .forblank {
+    height: 9em !important;
+  }
+
+}

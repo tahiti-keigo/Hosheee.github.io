@@ -1,0 +1,81 @@
+time {
+  display: block;
+  color: #B5B5B5;
+  margin-bottom: 10%;
+}
+
+.uk-card-title {
+  font-weight: 600;
+}
+
+.delete {
+  height: 40px;
+  width: 40px;
+  background-image: url("../img/delete-btn.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: 11%;
+  margin-bottom: 10%;
+  cursor: default;
+}
+.gl-tw {
+  position: absolute;
+  top: 25em;
+  left: -7.8em;
+  cursor: default;
+
+}
+.uk-modal-dialog.uk-modal-body.gl-modal-body {
+  height: 30em;
+  width: 50em;
+}
+
+.uk-grid-match.gl-grid {
+  height: 30em;
+}
+.left {
+  padding: 3em;
+  /* height: 30%; */
+  position: relative;
+}
+.right {
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 0 25px 25px 0;
+}
+
+
+/* ここの要素のURLはcommon.cssの#image-1〜7...と対応している */
+#g-image-1 {
+  background-image: url("../img/contentsimg.jpg");/* ここのURLが変わる */
+}
+#g-image-2 {
+  background-image: url("../img/ricky-kharawala-Yka2yhGJwjc-unsplash.jpg");
+}
+#g-image-3 {
+  background-image: url("#");
+}
+#g-image-4 {
+  background-image: url("#");
+}
+#g-image-5 {
+  background-image: url("#");
+}
+#g-image-6 {
+  background-image: url("#");
+}
+#g-image-7 {
+  background-image: url("#");
+}
+.uk-modal-title.g-title {
+  margin-left: 12%;
+}
+
+.left p {
+  margin-left: 12%;
+  font-size: 14px;
+}
+.left time {
+  margin-top: 5em;
+  margin-left: 12%;
+}
