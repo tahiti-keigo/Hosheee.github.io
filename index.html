@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>好きなものリスト(仮)</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/goodsmodal.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/uikit.min.css">
+    <link rel="stylesheet" href="css/uikit.css">
+    <link rel="stylesheet" href="css/uikit-rtl.css">
+    <link rel="stylesheet" href="css/uikit-rtl.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/uikit.min.js"></script>
+    <script type="text/javascript" src="/eel.js"></script>
+</head>
+  <body>
+    <header class="uk-section-small">
+      <a class="logo" href="#"></a>
+      <i id="h-menu" class="material-icons md-48 md-dark">view_headline</i>
+    </header>
+    <main>
+      <aside class="slidemenu">
+        <div class="slide-inner">
+          <img src="img/closebtn.svg" id="close-btn"></img>
+        </div>
+        <div class="text-group">
+          <a id="toggle-close" href="#modal-example" uk-toggle>
+            <div class="menu-back">
+              <img class="icons" src="img/add-icon.svg" alt=""><p class="sl-txt txt-0">アイテムを追加</p>
+            </div>
+          </a>
+          <br>
+          <div class="menu-back">
+          <img class="icons" src="img/share-icon.svg" alt=""><p class="sl-txt txt-1">リンクを共有</p>
+          <br>
+          </div>
+          <img class="icons" src="img/sns-icon.svg" alt=""><p class="sl-txt txt-2">SNS連携</p>
+          <img class="tw-icon" src="img/twitter-icon.svg" ontouchstart="">
+          <div class="menu-back">
+          <p class="sl-txt">サインアウト</p>
+          </div>
+        </div>
+      </aside>
+      <div class="slide-back"></div>
+      <div class="profile">
+        <img class="pf-pic" src="img/profilepic@2x.png" alt=" プロフィール写真">
+        <p class="myname">Akari</p>
+      </div>
+
+      <div class="uk-container-xsmall">
+        <div class="uk-child-width-1-4@m uk-child-width-1-3@s uk-child-width-1-2 uk-grid-match" uk-grid uk-scrollspy="cls: uk-animation-slide-bottom; target: .uk-card; delay: 60; repeat: false">
+          <div>
+            <div class="uk-card uk-card-default uk-card-hover uk-card-body" id="image-1">
+              <a uk-toggle="target: #modal-gallery-1">
+                <div class="uk-card-media-top">
+                  <div class="forblank"></div><!-- 調整用 -->
+                </div>
+              </a>
+            </div>
+          </div>
+          <div>
+            <div class="uk-card uk-card-default uk-card-hover uk-card-body" id="image-2">
+              <a uk-toggle="target: #modal-gallery-2">
+                <div class="uk-card-media-top">
+                  <div class="forblank"></div><!-- 調整用 -->
+                </div>
+              </a>
+            </div>
+          </div>
+          <div>
+            <div class="uk-card uk-card-default uk-card-hover uk-card-body" id="image-3">
+              <a uk-toggle="target: #modal-gallery-3">
+                <div class="uk-card-media-top">
+                  <div class="forblank"></div><!-- 調整用 -->
+                </div>
+              </a>
+            </div>
+          </div>
+          <div>
+            <div class="uk-card uk-card-default uk-card-hover uk-card-body" id="image-4">
+              <a uk-toggle="target: #modal-gallery-4">
+                <div class="uk-card-media-top">
+                  <div class="forblank"></div><!-- 調整用 -->
+                </div>
+              </a>
+            </div>
+          </div>
+          <div>
+            <div class="uk-card uk-card-default uk-card-hover uk-card-body" id="image-5">
+              <a uk-toggle="target: #modal-gallery-5">
+                <div class="uk-card-media-top">
+                  <div class="forblank"></div><!-- 調整用 -->
+                </div>
+              </a>
+            </div>
+          </div>
+          <div>
+            <div class="uk-card uk-card-default uk-card-hover uk-card-body" id="image-6">
+              <a uk-toggle="target: #modal-gallery-6">
+                <div class="uk-card-media-top">
+                  <div class="forblank"></div><!-- 調整用 -->
+                </div>
+              </a>
+            </div>
+          </div>
+          <div>
+            <div class="uk-card uk-card-default uk-card-hover uk-card-body" id="image-7">
+              <a uk-toggle="target: #modal-gallery-7">
+                <div class="uk-card-media-top">
+                  <div class="forblank"></div><!-- 調整用 -->
+                </div>
+              </a>
+            </div>
+          </div>
+          <div>
+            <!-- この要素は商品ではなく、追加ボタン -->
+            <div class="uk-card uk-card-default uk-card-hover uk-card-body last-child">
+              <a uk-toggle="target: #modal-example" class="add-class">
+                <div class="uk-card-media-top">
+                  <div class="forblank"></div><!-- 調整用 -->
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- This is the modal -->
+      <!-- バックエンド処理でここのモーダルの要素を追加して欲しい -->
+      <div id="modal-gallery-1" uk-modal>
+          <div class="uk-modal-dialog uk-modal-body gl-modal-body">
+            <div class="uk-grid-match gl-grid uk-child-width-1-2@m" uk-grid>
+              <div class="left">
+                <h2 class="uk-modal-title g-title">adidas エアマックス210</h2>
+                <p>限定色でオンライン限定だったやつ<br>
+                    売ってるところ見つけたら言ってください!!
+                </p>
+                <time>2019-09-22</time>
+                <a class="delete" type="button" alt=""></a>
+                <img class="tw-icon gl-tw" src="img/twitter-icon.svg" alt="">
+              </div>
+              <div class="right" id="g-image-1">
+              </div>
+            </div>
+          </div>
+      </div>
+      <div id="modal-gallery-2" uk-modal>
+          <div class="uk-modal-dialog uk-modal-body gl-modal-body">
+            <div class="uk-grid-match gl-grid uk-child-width-1-2@m" uk-grid>
+              <div class="left">
+                <h2 class="uk-modal-title g-title">商品名が入ります</h2>
+                <p>限定色でオンライン限定だったやつ<br>
+                    売ってるところ見つけたら言ってください!!
+                </p>
+                <time>2019-09-22</time>
+                <a class="delete" type="button" alt=""></a>
+                <img class="tw-icon gl-tw" src="img/twitter-icon.svg" alt="">
+              </div>
+              <div class="right" id="g-image-2">
+              </div>
+            </div>
+          </div>
+      </div>
+      <div id="modal-gallery-3" uk-modal>
+          <div class="uk-modal-dialog uk-modal-body gl-modal-body">
+            <div class="uk-grid-match gl-grid uk-child-width-1-2@m" uk-grid>
+              <div class="left">
+                <h2 class="uk-modal-title g-title">商品名が入ります</h2>
+                <p>限定色でオンライン限定だったやつ<br>
+                    売ってるところ見つけたら言ってください!!
+                </p>
+                <time>2019-09-22</time>
+                <a class="delete" type="button" alt=""></a>
+                <img class="tw-icon gl-tw" src="img/twitter-icon.svg" alt="">
+              </div>
+              <div class="right" id="g-image-3">
+              </div>
+            </div>
+          </div>
+      </div>
+      <div id="modal-gallery-4" uk-modal>
+          <div class="uk-modal-dialog uk-modal-body gl-modal-body">
+            <div class="uk-grid-match gl-grid uk-child-width-1-2@m" uk-grid>
+              <div class="left">
+                <h2 class="uk-modal-title g-title">商品名が入ります</h2>
+                <p>限定色でオンライン限定だったやつ<br>
+                    売ってるところ見つけたら言ってください!!
+                </p>
+                <time>2019-09-22</time>
+                <a class="delete" type="button" alt=""></a>
+                <img class="tw-icon gl-tw" src="img/twitter-icon.svg" alt="">
+              </div>
+              <div class="right" id="g-image-2">
+              </div>
+            </div>
+          </div>
+      </div>
+      <div id="modal-gallery-5" uk-modal>
+          <div class="uk-modal-dialog uk-modal-body gl-modal-body">
+            <div class="uk-grid-match gl-grid uk-child-width-1-2@m" uk-grid>
+              <div class="left">
+                <h2 class="uk-modal-title g-title">商品名が入ります</h2>
+                <p>限定色でオンライン限定だったやつ<br>
+                    売ってるところ見つけたら言ってください!!
+                </p>
+                <time>2019-09-22</time>
+                <a class="delete" type="button" alt=""></a>
+                <img class="tw-icon gl-tw" src="img/twitter-icon.svg" alt="">
+              </div>
+              <div class="right" id="g-image-2">
+              </div>
+            </div>
+          </div>
+      </div>
+      <div id="modal-gallery-6" uk-modal>
+          <div class="uk-modal-dialog uk-modal-body gl-modal-body">
+            <div class="uk-grid-match gl-grid uk-child-width-1-2@m" uk-grid>
+              <div class="left">
+                <h2 class="uk-modal-title g-title">商品名が入ります</h2>
+                <p>限定色でオンライン限定だったやつ<br>
+                    売ってるところ見つけたら言ってください!!
+                </p>
+                <time>2019-09-22</time>
+                <a class="delete" type="button" alt=""></a>
+                <img class="tw-icon gl-tw" src="img/twitter-icon.svg" alt="">
+              </div>
+              <div class="right" id="g-image-2">
+              </div>
+            </div>
+          </div>
+      </div>
+      <div id="modal-gallery-7" uk-modal>
+          <div class="uk-modal-dialog uk-modal-body gl-modal-body">
+            <div class="uk-grid-match gl-grid uk-child-width-1-2@m" uk-grid>
+              <div class="left">
+                <h2 class="uk-modal-title g-title">商品名が入ります</h2>
+                <p>限定色でオンライン限定だったやつ<br>
+                    売ってるところ見つけたら言ってください!!
+                </p>
+                <time>2019-09-22</time>
+                <a class="delete" type="button" alt=""></a>
+                <img class="tw-icon gl-tw" src="img/twitter-icon.svg" alt="">
+              </div>
+              <div class="right" id="g-image-2">
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <!-- <div uk-slider="center: true">
+
+        <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+
+            <ul class="uk-slider-items uk-child-width-1-3@s uk-grid">
+                <li>
+                  <div class="uk-card uk-card-default">
+                      <div class="uk-card-media-top">
+                          <img class="gallery-pic" src="img/contentsimg.jpg" alt="">
+                      </div>
+                      <div class="uk-card-body">
+                          <h3 class="uk-card-title">adidas エアマックス210</h3>
+                          <p>限定色でオンライン限定だったやつ<br>
+                            売ってるところ見つけたら言ってください!!</p>
+                          <time>2011-12-03T04:05Z</time>
+                          <img src="img/delete-btn.svg" type="button" id="delete-btn" alt="">
+                          <img class="tw-icon" src="img/twitter-icon.svg" alt="">
+                      </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="uk-card uk-card-default">
+                      <div class="uk-card-media-top">
+                          <img src="img/contentsimg.jpg" alt="">
+                      </div>
+                      <div class="uk-card-body">
+                          <h3 class="uk-card-title">adidas エアマックス210</h3>
+                          <p>限定色でオンライン限定だったやつ<br>
+                            売ってるところ見つけたら言ってください!!</p>
+                          <time>2011-12-03T04:05Z</time>
+                          <img src="img/delete-btn.svg" type="button" id="delete-btn" alt="">
+                          <img class="tw-icon" src="img/twitter-icon.svg" alt="">
+                      </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="uk-card uk-card-default">
+                      <div class="uk-card-media-top">
+                          <img src="img/contentsimg.jpg" alt="">
+                      </div>
+                      <div class="uk-card-body">
+                          <h3 class="uk-card-title">adidas エアマックス210</h3>
+                          <p>限定色でオンライン限定だったやつ<br>
+                            売ってるところ見つけたら言ってください!!</p>
+                          <time>2011-12-03T04:05Z</time>
+                          <img src="img/delete-btn.svg" type="button" id="delete-btn" alt="">
+                          <img class="tw-icon" src="img/twitter-icon.svg" alt="">
+                      </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="uk-card uk-card-default">
+                      <div class="uk-card-media-top">
+                          <img src="img/contentsimg.jpg" alt="">
+                      </div>
+                      <div class="uk-card-body">
+                          <h3 class="uk-card-title">adidas エアマックス210</h3>
+                          <p>限定色でオンライン限定だったやつ<br>
+                            売ってるところ見つけたら言ってください!!</p>
+                          <time>2011-12-03T04:05Z</time>
+                          <img src="img/delete-btn.svg" type="button" id="delete-btn" alt="">
+                          <img class="tw-icon" src="img/twitter-icon.svg" alt="">
+                      </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="uk-card uk-card-default">
+                      <div class="uk-card-media-top">
+                          <img src="img/contentsimg.jpg" alt="">
+                      </div>
+                      <div class="uk-card-body">
+                          <h3 class="uk-card-title">adidas エアマックス210</h3>
+                          <p>限定色でオンライン限定だったやつ<br>
+                            売ってるところ見つけたら言ってください!!</p>
+                          <time>2011-12-03T04:05Z</time>
+                          <img src="img/delete-btn.svg" type="button" id="delete-btn" alt="">
+                          <img class="tw-icon" src="img/twitter-icon.svg" alt="">
+                      </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="uk-card uk-card-default">
+                      <div class="uk-card-media-top">
+                          <img src="img/contentsimg.jpg" alt="">
+                      </div>
+                      <div class="uk-card-body">
+                          <h3 class="uk-card-title">adidas エアマックス210</h3>
+                          <p>限定色でオンライン限定だったやつ<br>
+                            売ってるところ見つけたら言ってください!!</p>
+                          <time>2011-12-03T04:05Z</time>
+                          <img src="img/delete-btn.svg" type="button" id="delete-btn" alt="">
+                          <img class="tw-icon" src="img/twitter-icon.svg" alt="">
+                      </div>
+                  </div>
+                </li>
+            </ul>
+
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+        </div>
+
+        <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+
+      </div> -->
+
+      <!-- This is the modal -->
+      <div id="modal-example" uk-modal>
+          <div class="uk-modal-dialog uk-modal-body">
+            <div class="modal-container">
+              <a class="back-btn" id="close-btn" target=""></a>
+              <h2 class="uk-modal-title">欲しいものをリストに追加</h2>
+              <div uk-form-custom class="add-box">
+                <input type="file">
+                <button class="uk-button uk-button-default" type="button" tabindex="-1"></button>
+                <p class="inner-txt">写真を追加</p>
+              </div>
+              <form class="" action="index.html" method="post">
+                <div class="input-title inputs">
+                  <div class="uk-inline">
+                    <input class="uk-input" type="text" placeholder="タイトルを入力">
+                  </div>
+                </div>
+                <div class="input-url inputs">
+                  <div class="uk-inline">
+                    <input class="uk-input inputurl" type="text" placeholder="URLから取得">
+                  </div>
+                </div>
+                <div class="input-comment inputs">
+                  <div class="uk-inline">
+                    <textarea class="uk-input inputcm" cols="40" rows="4" maxlength="120" type="text" placeholder="コメントを入力(最大120文字)"></textarea>
+                  </div>
+                </div>
+              </form>
+              <img class="tw-2" src="img/twitter-icon.svg" alt="">
+            </div>
+            <button type="submit" class="uk-button uk-button-primary" type="button"><p>追加</p></button>
+          </div>
+      </div>
+
+
+    </main>
+    <footer class="uk-section-xsmall">
+      <a class="logo-footer" href="#"></a>
+      <ul class="list">
+        <li><a href="#">LINK</a></li>
+        <li><a href="#">LINK</a></li>
+      </ul>
+    </footer>
+    <script>
+      $(function(){
+        /*open*/
+        $('#h-menu').click(function(){
+          $('.slidemenu').css(
+            'display','block'
+          ).animate({
+            right:'0'
+          },
+            300
+          );
+          $('.slide-back').css(
+            'display','block'
+          ).animate({
+            opacity:'0.5'
+          },
+            300
+          )
+        });
+        /*close*/
+        $('#close-btn, #toggle-close').click(function(){
+          $('.slidemenu').animate({
+            right:'-200px'
+          },
+            300
+          );
+          $('.slide-back').animate({
+            opacity:'0'
+          },
+            300
+          );
+          setTimeout(function(){
+            $('.slidemenu').css('display','none');
+            $('.slide-back').css('display','none');
+          },
+            300
+          );
+        });
+
+        $('.slide-back').click(function(){
+          $('.slidemenu').animate({
+            right:'-200px'
+          },
+            300
+          );
+          $('.slide-back').animate({
+            opacity:'0'
+          },
+            300
+          );
+          setTimeout(function(){
+            $('.slidemenu').css('display','none');
+            $('.slide-back').css('display','none');
+          },
+            300
+          );
+        });
+
+        $('.back-btn').click(function(){
+          $('#modal-example').fadeOut(300);
+          $('.add-class').trigger("click");
+        });
+
+        // $('.last-child').click(function(){
+        //   $('#toggle-close').trigger("click");
+        // });
+        // $('#close-btn2').click(function(){
+        //     $('.uk-open').trigger("click");
+        // });
+
+      });
+
+    </script>
+  </body>
+</html>
