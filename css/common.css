@@ -117,7 +117,7 @@ header.uk-section-small {
 }
 
 /* twitter画像をホバーした */
-img.tw-icon:hover {
+.tw-icon:hover {
     /* 透明度を上げることで、画像の色を薄く見せる。*/
     opacity: 0.5;
     /* リンクをホバーしたときのカーソルにする。*/
@@ -125,7 +125,7 @@ img.tw-icon:hover {
 }
 
 /* twitter画像をクリックした瞬間 */
-img.tw-icon:active {
+.tw-icon:active {
     /* 要素を若干下に下げることで、押した感じを出す。*/
     /* 今いる位置から相対的に3px下に配置する。*/
     position: relative;
@@ -184,7 +184,7 @@ img.tw-icon:active {
 
  */
 #image-1 {
-  background-image: url("../img/contentsimg.jpg");/*ここに投稿した画像が載る*/
+  background-image: url("../img/melody-jacob-PlfAmO7OnDI-unsplash.jpg");/*ここに投稿した画像が載る*/
 }
 #image-2 {
   background-image: url("../img/ricky-kharawala-Yka2yhGJwjc-unsplash.jpg");/*ここに投稿した画像が載る*/
@@ -199,10 +199,10 @@ img.tw-icon:active {
   background-image: url();/*ここに投稿した画像が載る*/
 }
 #image-6 {
-  background-image: url();/*ここに投稿した画像が載る*/
+  background-image: url("");/*ここに投稿した画像が載る*/
 }
 #image-7 {
-  background-image: url();/*ここに投稿した画像が載る*/
+  background-image: url("");/*ここに投稿した画像が載る*/
 }
 .uk-card.uk-card-default.uk-card-hover.uk-card-body.last-child {
   background-image: url("../img/ic_add_circle_outline_24px.svg");/*ここは変えない!!*/
@@ -234,6 +234,33 @@ img.tw-icon:active {
   opacity: .5;
 }
 
+.Input-file .preview {
+    background-image: url(/hoge.jpg);
+}
+
+.Input-file input[type="file"] {
+    opacity: 0;
+}
+
+.Input-file {
+    width: 170px;
+    height: 170px;
+    position: relative;
+    right: 30px;
+}
+
+.output-file {
+    width: 170px;
+    height: 170px;
+}
+
+
+.img2 {
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 18px;
+}
 
 /*
 
@@ -285,13 +312,13 @@ modal
   color: #2D3142;
 }
 .inner-txt {
-  position: absolute;
-  left: 25%;
-  right: 0;
-  top: 50%;
-  bottom: 0;
-  margin: auto;
-  color: #B5B5B5;
+    position: absolute;
+    left: 25%;
+    right: 0;
+    top: 50%;
+    bottom: 0;
+    margin: auto;
+    color: #B5B5B5;
 }
 .uk-inline {
   float: right;
